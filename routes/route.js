@@ -2,10 +2,10 @@ const express = require('express');
 const router = express.Router();
 
 
-const feedingSchedule = require('../models/feedingSchedules');
+const feedingSchedule = require('../models/feedingSchedule');
 
 //retrieving feeding data
-router.get('/feedingSchedules',(req, res, next)=>{
+router.get('/feedingSchedule',(req, res, next)=>{
     feedingSchedule.find(function(error,schedules) {
         res.json(schedules);
     });
@@ -13,7 +13,6 @@ router.get('/feedingSchedules',(req, res, next)=>{
 
 //add feeding schedule
 router.post('/feedingSchedule',(req, res, next)=>{
-    console.log("error even trying to post");
     let newFeedingSchedule = new feedingSchedule({
         feedingTime: req.body.feedingTime,
         foodType: req.body.foodType,
