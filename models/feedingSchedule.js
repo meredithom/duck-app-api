@@ -6,19 +6,19 @@ const feedingScheduleSchema = mongoose.Schema({
         type: String,
         require: true
     },
-    foodType: {
-        type: String,
-        required: true
-    },
     feedingLocation: {
         type: String,
         required: true
     },
-    numberOfDucks: {
+    foodType: {
         type: String,
         required: true
     },
     foodQuantity: {
+        type: String,
+        required: true
+    },
+    numberOfDucks: {
         type: String,
         required: true
     }
