@@ -27,10 +27,6 @@ const port = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log(route);
-
-//link to frontend
-app.use(express.static(path.join(__dirname,'D:\repos\duck-app\src\index.html')));
 
 app.use('/api', route);
 
@@ -41,5 +37,5 @@ app.get('/',(req, res)=>{
 
 //start
 app.listen(port,()=> {
-    console.log('Server started at port:'+port);
+    console.log('Server started at port:'+ port);
 });
